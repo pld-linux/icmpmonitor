@@ -1,0 +1,6 @@
+# Config file for icmpmonitor startup
+
+ICMPMONITOR_OPTS="-f icmpmonitor.conf -d"
+
+# This must be last line !
+# vi:syntax=sh
