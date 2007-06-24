@@ -1,4 +1,5 @@
-Summary:	multiple host monitoring tool
+Summary:	Multiple host monitoring tool
+Summary(pl.UTF-8):	Narzędzie do monitorowania wielu hostów
 Name:		icmpmonitor
 Version:	1.2
 Release:	0.1
@@ -11,6 +12,7 @@ Source2:	%{name}.sysconfig
 Source3:	%{name}.conf
 URL:		http://www.crocodile.org/software.html
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.228
 Requires(post,preun):	/sbin/chkconfig
@@ -19,6 +21,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Using the InterNet Control Message Protocol (ICMP) "ECHO" facility,
 monitors several hosts, and notify admin if some of them are down.
+
+%description -l pl.UTF-8
+icmpmonitor wykorzystuje pakiety ICMP ECHO do monitorowania kilku
+hostów i powiadamiania administratora, jeśli któreś z nich nie
+działają.
 
 %prep
 %setup -q
